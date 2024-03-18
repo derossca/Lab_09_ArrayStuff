@@ -67,9 +67,20 @@ public class Main {
         //TASK 2
         //declaring variables
         Scanner in = new Scanner(System.in);
+
+        //part a
         //using static method for userNum to get input of an integer within range set
         int userNum = SafeInput.getRangedInt(in, "Choose a number between ", 1, 100);
 
+        //part b
 
+
+        //part c
+        userNum = SafeInput.getRangedInt(in, "Choose a value between ", 1, 100);
+
+        //part d
+
+
+        //part e
     }
 }
