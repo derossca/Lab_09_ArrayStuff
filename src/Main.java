@@ -1,5 +1,6 @@
 //importing random
 import java.util.Random;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
     {
@@ -53,6 +54,10 @@ public class Main {
         System.out.printf("The average of all the data points is " + aveDataPoints);
 
         //TASK 2
+        //declaring variables
+        Scanner in = new Scanner(System.in);
+        //using static method for userNum to get input of an integer within range set
+        int userNum = SafeInput.getRangedInt(in, "Choose a number between 1 - 100", 1, 100);
 
 
     }
