@@ -59,6 +59,5 @@ public class Main {
         //using static method for userNum to get input of an integer within range set
         int userNum = SafeInput.getRangedInt(in, "Choose a number between 1 - 100", 1, 100);
 
-
     }
 }
