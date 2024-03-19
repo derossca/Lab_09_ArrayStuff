@@ -72,14 +72,46 @@ public class Main {
         //using static method for userNum to get input of an integer within range set
         int userNum = SafeInput.getRangedInt(in, "Choose a number between ", 1, 100);
 
+        System.out.println();
         //part b
 
 
         //part c
-        userNum = SafeInput.getRangedInt(in, "Choose a value between ", 1, 100);
+        //userNum = SafeInput.getRangedInt(in, "Choose a value between ", 1, 100);
 
         //part d
+        //declaring and initializing variables
+        int min = dataPoints[0];
+        int max = dataPoints[0];
 
+        //for loop to generate array
+        for(int row = 0; row < dataPoints.length; row ++)
+        {
+            //creates 100 random integers between 1 - 100
+            dataPoints[row] = rnd.nextInt(100) + 1;
+
+            //if condition that finds the minimum integer
+            if (min > dataPoints[row])
+            {
+                min = dataPoints[row];
+            }
+
+            //if condition to find the max integer
+            if (max < dataPoints[row])
+            {
+                max = dataPoints[row];
+            }
+            //printing table to see the random numbers generated for min/max
+            System.out.printf("%5d",dataPoints[row]);
+            if (row % 20 == 0)
+            {
+                System.out.println("");
+            }
+        }
+
+        //displaying output for min/max
+        System.out.println("The min is " + min);
+        System.out.println("The max is " + max);
 
         //part e
     }
