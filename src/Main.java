@@ -79,7 +79,14 @@ public class Main {
         //part c
         //calling method for user input
         userNum = SafeInput.getRangedInt(in, "Choose a value between ", 1, 100);
-
+        //for loop to run through array to search for user input
+        for(int row = 0; row < dataPoints.length; row ++)
+        {
+            if(dataPoints[row] == userNum)
+            {
+                System.out.println("The value " + userNum + " was found at array index " + row);
+            }
+        }
 
         System.out.println(); //creating space between parts
 
