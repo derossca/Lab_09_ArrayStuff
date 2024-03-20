@@ -147,8 +147,13 @@ public class Main {
         System.out.println("The min is " + min);
         System.out.println("The max is " + max);
 
-        //part e
 
          */
+
+        //part e
+
+
     }
+
+    //part e static method
 }
