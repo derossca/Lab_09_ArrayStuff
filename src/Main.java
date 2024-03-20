@@ -69,23 +69,45 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         //part a
+
         //using static method for userNum to get input of an integer within range set
         int userNum = SafeInput.getRangedInt(in, "Choose a number between ", 1, 100);
 
         System.out.println();
-        //part b
 
+        //part b
+        //for loop that iterates thru dataPoints array
+        for(int row = 0; row < dataPoints.length; row ++)
+        {
+            if(dataPoints[row] == userNum)
+            {
+                System.out.println("The value " + userNum + " is found at array index " + row);
+            }
+        }
+
+
+        /*
 
         //part c
+        //declaring variable
+        boolean foundUserNum = false;
+
         //calling method for user input
         userNum = SafeInput.getRangedInt(in, "Choose a value between ", 1, 100);
+
         //for loop to run through array to search for user input
         for(int row = 0; row < dataPoints.length; row ++)
         {
             if(dataPoints[row] == userNum)
             {
+                foundUserNum = true;
                 System.out.println("The value " + userNum + " was found at array index " + row);
+                break;
             }
+        }
+        if(!foundUserNum)
+        {
+            System.out.println("Value " + userNum + " not found!");
         }
 
         System.out.println(); //creating space between parts
@@ -126,5 +148,7 @@ public class Main {
         System.out.println("The max is " + max);
 
         //part e
+
+         */
     }
 }
