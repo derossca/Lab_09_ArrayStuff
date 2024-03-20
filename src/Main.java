@@ -11,7 +11,7 @@ public class Main {
         //declare
         int [] dataPoints;
         //size
-        dataPoints = new int[101];
+        dataPoints = new int[100];
 
         //part b
         //for loop to display array
@@ -77,14 +77,18 @@ public class Main {
 
 
         //part c
-        //userNum = SafeInput.getRangedInt(in, "Choose a value between ", 1, 100);
+        //calling method for user input
+        userNum = SafeInput.getRangedInt(in, "Choose a value between ", 1, 100);
+
+
+        System.out.println(); //creating space between parts
 
         //part d
         //declaring and initializing variables
         int min = dataPoints[0];
         int max = dataPoints[0];
 
-        //for loop to generate array
+        //for loop to generate random numbers from array
         for(int row = 0; row < dataPoints.length; row ++)
         {
             //creates 100 random integers between 1 - 100
@@ -110,6 +114,7 @@ public class Main {
         }
 
         //displaying output for min/max
+        System.out.println(); // making min be on new line
         System.out.println("The min is " + min);
         System.out.println("The max is " + max);
 
