@@ -55,10 +55,11 @@ public class Main {
                 System.out.println("");
             }
         }
-        System.out.println();
+        System.out.println("\n"); //for space between table and sum/average
+
         //prints out the sum
-        System.out.printf("The sum of all the data points is " + sumDataPoints);
-        System.out.println(); // new line
+        System.out.println("The sum of all the data points is " + sumDataPoints);
+
         aveDataPoints = sumDataPoints / dataPoints.length; //gives the average of all the data points
         System.out.printf("The average of all the data points is " + aveDataPoints);
 
@@ -76,15 +77,19 @@ public class Main {
         System.out.println();
 
         //part b
+        //declaring variable to use to count number of times user number occurs in the array
+        int count = 0;
         //for loop that iterates thru dataPoints array
         for(int row = 0; row < dataPoints.length; row ++)
         {
+            dataPoints[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
             if(dataPoints[row] == userNum)
             {
-                System.out.println("The value " + userNum + " is found at array index " + row);
+                count++;
             }
         }
 
+        System.out.println("The number " + userNum + " occurs " + count + " times in the array!");
 
         /*
 
