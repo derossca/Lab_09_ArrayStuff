@@ -16,6 +16,12 @@ public class ExtraCredit {
         System.out.println("\n");
         //calling static method for max
         System.out.println("The max of dataPoints is: " + max(dataPoints));
+        System.out.println("\n");
+        //calling static method for ouccuranceScan
+        System.out.println("The number of times 33 occurs in the array is: ");
+        System.out.println(occuranceScan(dataPoints, 33));
+        //calling static method for sum of dataPoints
+
     }
 
     //static method for min
@@ -87,12 +93,9 @@ public class ExtraCredit {
     {
         Random rnd = new Random();
         Scanner in = new Scanner(System.in);
+        //declaring array and variables
         int [] dataPoints = new int[100];
 
-        //using static method for userNum to get input of an integer within range set
-        int userNum = SafeInput.getRangedInt(in, "Choose a number between ", 1, 100);
-
-        System.out.println();
 
         //declaring variable to use to count number of times user number occurs in the array
         int count = 0;
@@ -100,12 +103,23 @@ public class ExtraCredit {
         for(int row = 0; row < dataPoints.length; row ++)
         {
             dataPoints[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
-            if(dataPoints[row] == userNum)
+            if(dataPoints[row] == target)
             {
                 count++;
             }
         }
         //returns the number of times the userNum is found in array
         return count;
+    }
+
+    //static method for sum
+    public static int sum(int values[])
+    {
+        //declaring and initializing random
+        Random rnd = new Random();
+        //declare and initialize array
+        int [] dataPoints = new int[100];
+        //declaring variables
+
     }
 }
