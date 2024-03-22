@@ -8,7 +8,7 @@ public class Main {
 
         //TASK 1
         //part a
-        //declare
+        //declare array
         int [] dataPoints;
         //size
         dataPoints = new int[100];
@@ -40,7 +40,7 @@ public class Main {
         //part d
         //declaring and initializing variable for sum of dataPoints
         int sumDataPoints = 0;
-        double aveDataPoints = 0;
+        int aveDataPoints = 0;
         //for loop to display array
         for(int row = 0; row < dataPoints.length; row ++)
         {
@@ -155,11 +155,8 @@ public class Main {
 
         //part e
 
-        //declaring variables
-        double [] data = new double[100];
-
         //calling static method getAverage
-        System.out.println("The average of dataPoints is: " + getAverage(data));
+
     }
 
 
@@ -167,34 +164,5 @@ public class Main {
     /**
      *param
      */
-    public static double getAverage(double values[])
-    {
-        //declaring and initializing Random
-        Random rnd = new Random();
-        //declaring and initializing array
-        double [] dataPoints = new double[100];
-        //declaring and initializing variables
-        double sumDataPoints = 0;
-        double aveDataPoints = 0;
 
-        //for loop to go through array
-        for(int row = 0; row < dataPoints.length; row ++)
-        {
-            //generates random doubles from array index
-            dataPoints[row] = rnd.nextDouble(100) + 1;
-            //sum of all the dataPoints
-            sumDataPoints = sumDataPoints + dataPoints[row];
-            //printing out table to see what is being added up and averaged
-            System.out.printf("%5d", dataPoints[row]);
-            if(row % 20 == 0)
-            {
-                System.out.println("");
-            }
-        }
-
-        aveDataPoints = sumDataPoints / dataPoints.length;
-
-        //returns the value of the average of the data points
-        return aveDataPoints;
-    }
 }
