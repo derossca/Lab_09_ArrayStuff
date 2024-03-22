@@ -102,6 +102,7 @@ public class Main {
         //for loop to run through array to search for user input
         for(int row = 0; row < dataPoints.length; row ++)
         {
+            dataPoints[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
             if(dataPoints[row] == userNum)
             {
                 foundUserNum = true;

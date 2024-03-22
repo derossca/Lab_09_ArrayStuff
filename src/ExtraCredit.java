@@ -23,6 +23,9 @@ public class ExtraCredit {
         System.out.println("\n");
         //calling static method for sum of dataPoints
         System.out.println("The sum of dataPoints is: " + sum(dataPoints));
+        System.out.println();
+        //calling static method for boolean contains which will return true if array contains target number
+        System.out.println("Was the target found? " + contains(dataPoints, 33));
     }
 
     //static method for min
@@ -141,8 +144,29 @@ public class ExtraCredit {
     }
 
     //static method for boolean contains, returns true if target value is found in array
-    public boolean contains(int values[], int target)
+    public static boolean contains(int values[], int target)
     {
+        //declaring and initializing random
+        Random rnd = new Random();
+        //declare and initialize array
+        int [] dataPoints = new int[100];
+        //declaring variables
+        boolean foundTarget = false;
 
+        for(int row = 0; row < dataPoints.length; row ++)
+        {
+            dataPoints[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
+            if(dataPoints[row] == target)
+            {
+                foundTarget = true;
+                System.out.println("The value " + target + " was found at array index " + row);
+                break;
+            }
+        }
+        if(!foundTarget)
+        {
+            System.out.println("Value " + target + " not found!");
+        }
+        return foundTarget;
     }
 }
