@@ -139,4 +139,10 @@ public class ExtraCredit {
         System.out.println();
         return sumDataPoints;
     }
+
+    //static method for boolean contains, returns true if target value is found in array
+    public boolean contains(int values[], int target)
+    {
+
+    }
 }
