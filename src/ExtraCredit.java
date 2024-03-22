@@ -48,7 +48,7 @@ public class ExtraCredit {
             {
                 min = dataPoints[row];
             }
-            //printing table to see the random numbers generated for min/max
+            //printing table to see the random numbers generated for min
             System.out.printf("%5d",dataPoints[row]);
             if (row % 20 == 0)
             {
@@ -75,12 +75,12 @@ public class ExtraCredit {
             //gives 100 integers at random from 1 - 100
             dataPoints[row] = rnd.nextInt(100) + 1;
 
-            //if condition to find min value
+            //if condition to find max value
             if(max < dataPoints[row])
             {
                 max = dataPoints[row];
             }
-            //printing table to see the random numbers generated for min/max
+            //printing table to see the random numbers generated for max
             System.out.printf("%5d",dataPoints[row]);
             if (row % 20 == 0)
             {
@@ -112,7 +112,7 @@ public class ExtraCredit {
                 count++;
             }
         }
-        //returns the number of times the userNum is found in array
+        //returns the number of times the target is found in array
         return count;
     }
 
@@ -132,7 +132,7 @@ public class ExtraCredit {
             dataPoints[row] = rnd.nextInt(100) + 1;
             //gives the sum of all the data points added up
             sumDataPoints = sumDataPoints + dataPoints[row];
-            //printing out table to see what is being added up and averaged
+            //printing out table to see what is being added up
             System.out.printf("%5d", dataPoints[row]);
             if(row % 20 == 0)
             {
@@ -160,13 +160,15 @@ public class ExtraCredit {
             {
                 foundTarget = true;
                 System.out.println("The value " + target + " was found at array index " + row);
-                break;
+                break; // if the target is found in array, boolean is true, outputs target and location, and breaks out of loop
             }
         }
+        //if condition to output if the target is not found in the for loop
         if(!foundTarget)
         {
             System.out.println("Value " + target + " not found!");
         }
+        //returns true or false whether target is found
         return foundTarget;
     }
 }

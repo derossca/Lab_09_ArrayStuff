@@ -152,11 +152,12 @@ public class Main {
         System.out.println("The min is " + min);
         System.out.println("The max is " + max);
 
+        System.out.println();
 
         //part e
 
         //calling static method getAverage
-
+        System.out.println("The average of dataPoints is: " + getAverage(dataPoints));
     }
 
 
@@ -164,5 +165,33 @@ public class Main {
     /**
      *param
      */
+    public static double getAverage(int values[])
+    {
+        Random rnd = new Random();
+        //declaring variables
+        int [] dataPoints = new int[100];
+        int sumDataPoints = 0;
+        double aveDataPoints = 0;
 
+        //for loop that goes through array
+        for(int row = 0; row < dataPoints.length; row ++)
+        {
+            //creates 100 random integers between 1 - 100
+            dataPoints[row] = rnd.nextInt(100) + 1;
+            //gives the sum of all the data points added up
+            sumDataPoints = sumDataPoints + dataPoints[row];
+            //printing out table to see what is being added up and averaged
+            System.out.printf("%5d", dataPoints[row]);
+            if(row % 20 == 0)
+            {
+                System.out.println("");
+            }
+        }
+
+        aveDataPoints = sumDataPoints / dataPoints.length;
+
+        System.out.println();
+        //returns double value for average of dataPoints
+        return aveDataPoints;
+    }
 }
