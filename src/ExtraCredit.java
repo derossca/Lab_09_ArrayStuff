@@ -20,8 +20,9 @@ public class ExtraCredit {
         //calling static method for ouccuranceScan
         System.out.println("The number of times 33 occurs in the array is: ");
         System.out.println(occuranceScan(dataPoints, 33));
+        System.out.println("\n");
         //calling static method for sum of dataPoints
-
+        System.out.println("The sum of dataPoints is: " + sum(dataPoints));
     }
 
     //static method for min
@@ -120,6 +121,22 @@ public class ExtraCredit {
         //declare and initialize array
         int [] dataPoints = new int[100];
         //declaring variables
+        int sumDataPoints = 0;
 
+        for(int row = 0; row < dataPoints.length; row ++)
+        {
+            //creates 100 random integers between 1 - 100
+            dataPoints[row] = rnd.nextInt(100) + 1;
+            //gives the sum of all the data points added up
+            sumDataPoints = sumDataPoints + dataPoints[row];
+            //printing out table to see what is being added up and averaged
+            System.out.printf("%5d", dataPoints[row]);
+            if(row % 20 == 0)
+            {
+                System.out.println("");
+            }
+        }
+        System.out.println();
+        return sumDataPoints;
     }
 }
