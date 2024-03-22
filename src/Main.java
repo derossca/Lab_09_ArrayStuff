@@ -91,7 +91,7 @@ public class Main {
 
         System.out.println("The number " + userNum + " occurs " + count + " times in the array!");
 
-        /*
+
         //part c
         //declaring variable
         boolean foundUserNum = false;
@@ -151,7 +151,6 @@ public class Main {
         System.out.println("The min is " + min);
         System.out.println("The max is " + max);
 
-         */
 
         //part e
 
