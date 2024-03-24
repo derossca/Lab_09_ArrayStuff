@@ -33,23 +33,21 @@ public class ExtraCredit {
     {
         //declaring and initializing random
         Random rnd = new Random();
-        //declare and initialize array
-        int [] dataPoints = new int[100];
         //declaring variables
         int min = 0;
 
-        for(int row = 0; row < dataPoints.length; row ++)
+        for(int row = 0; row < values.length; row ++)
         {
             //gives 100 integers at random from 1 - 100
-            dataPoints[row] = rnd.nextInt(100) + 1;
+            values[row] = rnd.nextInt(100) + 1;
 
             //if condition to find min value
-            if(min > dataPoints[row])
+            if(min > values[row])
             {
-                min = dataPoints[row];
+                min = values[row];
             }
             //printing table to see the random numbers generated for min
-            System.out.printf("%5d",dataPoints[row]);
+            System.out.printf("%5d",values[row]);
             if (row % 20 == 0)
             {
                 System.out.println("");
@@ -65,23 +63,21 @@ public class ExtraCredit {
     {
         //declaring and initializing random
         Random rnd = new Random();
-        //declare and initialize array
-        int [] dataPoints = new int[100];
         //declaring variables
         int max = 0;
 
-        for(int row = 0; row < dataPoints.length; row ++)
+        for(int row = 0; row < values.length; row ++)
         {
             //gives 100 integers at random from 1 - 100
-            dataPoints[row] = rnd.nextInt(100) + 1;
+            values[row] = rnd.nextInt(100) + 1;
 
             //if condition to find max value
-            if(max < dataPoints[row])
+            if(max < values[row])
             {
-                max = dataPoints[row];
+                max = values[row];
             }
             //printing table to see the random numbers generated for max
-            System.out.printf("%5d",dataPoints[row]);
+            System.out.printf("%5d",values[row]);
             if (row % 20 == 0)
             {
                 System.out.println("");
@@ -97,17 +93,15 @@ public class ExtraCredit {
     {
         Random rnd = new Random();
         Scanner in = new Scanner(System.in);
-        //declaring array and variables
-        int [] dataPoints = new int[100];
 
 
         //declaring variable to use to count number of times user number occurs in the array
         int count = 0;
         //for loop that iterates thru dataPoints array
-        for(int row = 0; row < dataPoints.length; row ++)
+        for(int row = 0; row < values.length; row ++)
         {
-            dataPoints[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
-            if(dataPoints[row] == target)
+            values[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
+            if(values[row] == target)
             {
                 count++;
             }
@@ -121,19 +115,17 @@ public class ExtraCredit {
     {
         //declaring and initializing random
         Random rnd = new Random();
-        //declare and initialize array
-        int [] dataPoints = new int[100];
         //declaring variables
         int sumDataPoints = 0;
 
-        for(int row = 0; row < dataPoints.length; row ++)
+        for(int row = 0; row < values.length; row ++)
         {
             //creates 100 random integers between 1 - 100
-            dataPoints[row] = rnd.nextInt(100) + 1;
+            values[row] = rnd.nextInt(100) + 1;
             //gives the sum of all the data points added up
-            sumDataPoints = sumDataPoints + dataPoints[row];
+            sumDataPoints = sumDataPoints + values[row];
             //printing out table to see what is being added up
-            System.out.printf("%5d", dataPoints[row]);
+            System.out.printf("%5d", values[row]);
             if(row % 20 == 0)
             {
                 System.out.println("");
@@ -148,15 +140,13 @@ public class ExtraCredit {
     {
         //declaring and initializing random
         Random rnd = new Random();
-        //declare and initialize array
-        int [] dataPoints = new int[100];
         //declaring variables
         boolean foundTarget = false;
 
-        for(int row = 0; row < dataPoints.length; row ++)
+        for(int row = 0; row < values.length; row ++)
         {
-            dataPoints[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
-            if(dataPoints[row] == target)
+            values[row] = rnd.nextInt(100) + 1; //makes random integers between 1 - 100
+            if(values[row] == target)
             {
                 foundTarget = true;
                 System.out.println("The value " + target + " was found at array index " + row);

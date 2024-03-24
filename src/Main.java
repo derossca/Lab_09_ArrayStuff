@@ -8,10 +8,8 @@ public class Main {
 
         //TASK 1
         //part a
-        //declare array
-        int [] dataPoints;
-        //size
-        dataPoints = new int[100];
+        //declare array and size of index
+        int [] dataPoints = new int[100];
 
         //part b
         //for loop to display array
@@ -169,26 +167,26 @@ public class Main {
     {
         Random rnd = new Random();
         //declaring variables
-        int [] dataPoints = new int[100];
+        //int [] dataPoints = new int[100];
         int sumDataPoints = 0;
         double aveDataPoints = 0;
 
         //for loop that goes through array
-        for(int row = 0; row < dataPoints.length; row ++)
+        for(int row = 0; row < values.length; row ++)
         {
             //creates 100 random integers between 1 - 100
-            dataPoints[row] = rnd.nextInt(100) + 1;
+            values[row] = rnd.nextInt(100) + 1;
             //gives the sum of all the data points added up
-            sumDataPoints = sumDataPoints + dataPoints[row];
+            sumDataPoints = sumDataPoints + values[row];
             //printing out table to see what is being added up and averaged
-            System.out.printf("%5d", dataPoints[row]);
+            System.out.printf("%5d", values[row]);
             if(row % 20 == 0)
             {
                 System.out.println("");
             }
         }
 
-        aveDataPoints = sumDataPoints / dataPoints.length;
+        aveDataPoints = sumDataPoints / values.length;
 
         System.out.println();
         //returns double value for average of dataPoints
